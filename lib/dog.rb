@@ -30,6 +30,6 @@ class Dog
    end
    self
  end
- def self.create
+ def self.create(run)
  end
 end
