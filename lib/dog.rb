@@ -41,7 +41,7 @@ class Dog
         AND breed = ?
         LIMIT 1"
 
-  dog = DB[:conn].execute(sql,name,breed)
+  dog = DB[:conn].execute(sql,rent[1], rent[2])
   # binding.pry
  end
 end
