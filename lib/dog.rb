@@ -32,5 +32,6 @@ class Dog
  end
  def self.create(rent)
    dog = Dog.new(rent)
+   dog.save
  end
 end
