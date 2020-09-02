@@ -7,8 +7,8 @@ class Dog
 
   def self.create_table
     sql = "CREATE IF NOT EXISTS dogs(
-    id INTEGER PRIMARY KEY, 
-    name TEXT, 
+    id INTEGER PRIMARY KEY,
+    name TEXT,
     breed TEXT
     );"
     DB[:conn].execute(sql)
