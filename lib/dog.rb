@@ -35,6 +35,15 @@ class Dog
    dog.save
  end
  def self.new_from_db(rent)
+   sql = "
+        SELECT *
+        FROM dogs
+        WHERE name = ?
+        AND breed = ?
+        LIMIT 1
+      "
+
+  dog = DB[:conn].execute(sql,name,breed)
   # binding.pry
  end
 end
