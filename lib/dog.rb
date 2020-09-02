@@ -35,6 +35,6 @@ class Dog
    dog.save
  end
  def self.new_from_db(rent)
-  binding.pry
+  # binding.pry
  end
 end
