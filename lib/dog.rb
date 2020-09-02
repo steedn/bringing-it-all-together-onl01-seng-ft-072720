@@ -31,7 +31,7 @@ class Dog
    self
  end
  def self.create(rent)
-   dog = Dog.new(rent)
+   dog = Dog.new(name: rent[0], breed: rent[1])
    dog.save
  end
  def self.new_from_db(rent)
