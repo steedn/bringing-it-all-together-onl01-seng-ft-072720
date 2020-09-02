@@ -41,7 +41,7 @@ class Dog
         AND breed = ?
         LIMIT 1"
 
-  dog = DB[:conn].execute(sql,name, breed)
+  dog = DB[:conn].execute(sql,name: name, breed: breed)
   # binding.pry
   if !dog.empty?
      dog_data = dog[0]
