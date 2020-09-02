@@ -34,4 +34,6 @@ class Dog
    dog = Dog.new(rent)
    dog.save
  end
+ def self.new_from_db
+ end
 end
