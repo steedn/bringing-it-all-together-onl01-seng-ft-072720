@@ -30,8 +30,8 @@ class Dog
    end
    self
  end
- def self.create(rent)
-   dog = Dog.new(name: rent[0], breed: rent[1])
+ def self.create(name:, breed:)
+   dog = Dog.new(name: name, breed: breed)
    dog.save
  end
  def self.new_from_db(rent)
