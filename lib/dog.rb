@@ -1,6 +1,6 @@
 class Dog
   attr_accessor :name, :breed, :id
-  def initialize(name)
+  def initialize(name:, breed:)
     @name = name[:name]
     @breed = name[:breed]
   end
@@ -43,5 +43,12 @@ class Dog
 
   dog = DB[:conn].execute(sql,rent[1], rent[2])
   # binding.pry
+  if !dog.empty?
+     dog_data = dog[0]
+     dog = Dog.new(name: dog_data[1], breed: dog_data[2])
+   else
+     dog = self.create(name: name, breed: breed)
+   end
+   dog
  end
 end
