@@ -4,4 +4,7 @@ class Dog
     @name = name[:name]
     @breed = name[:breed]
   end
+
+  def self.create_table
+  end
 end
